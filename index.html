@@ -11,6 +11,7 @@
   
   </style>
 
+
 <div id="box">
 hello chat
 </div>
@@ -18,17 +19,26 @@ hello chat
 
 <script>
   function randomColor () {
-    const r = Math.random() * 255
-    const g = Math.random() * 255
-    const b = Math.random() * 255
-    return color = 'rgb(${r}, ${g}, ${b})' // 'rgb(100, 0, 0)'
+   const r = Math.random() * 255
+   const g = Math.random() * 255
+   const b = Math.random() * 255
+    return `rgb(${r}, ${g}, ${b})` // 'rgb(100, 0, 0)'
+  }
+  
+  function updateBox () {
+    box.style.backgroundColor = randomColor()
+    box.style.color = randomColor()
+    document.body.style.backgroundColor = randomColor()
   }
   
   const box = document.querySelector('#box')
-  box.innerText = 'haha haha haha'
+  box.innerText = 'Welcome to the Web'
   box.style.color = 'white'
-  box.style.backgroundColor = randomColor
+
+  box.addEventListener('click', updateBox)
   
-  const color = randomColor()
+  let images = [one, two, three]
   
 </script>
+
+<img src="filename.jpg" alt="description of image">
